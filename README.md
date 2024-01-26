@@ -22,7 +22,7 @@ default port is 8080 to listen request
 
 ### test api with swagger, open 
 
-```host-addr/swagger-ui/index.html```  to do debug in swagger page
+```host-addr/swagger-ui/index.html```  to do local debugging in swagger page
 
 
 ## 2. the /ui folder to run a single page at browser, to call backend api to get search result of foods
@@ -32,6 +32,7 @@ change the ```API_URL``` in index.html file according to backend api endpoint
 ## 3. TODO
 - secuity check
 - search pattern
-- auto deploy
 - to show map of address
+- app log
+- auto deploy
 - others

@@ -26,12 +26,16 @@ public class SearchController {
     @Value("classpath:data/Mobile_Food_Facility_Permit.csv:d:\\Mobile_Food_Facility_Permit.csv")
     private String csvFile;
 
+    /**
+     * @Description search api to accept "keyword" query string from client
+     * @param keyword search keyword from client
+     * @return search result with keyword
+     */
     @GetMapping("/search")
     public List<FoodTruck> Search(@RequestParam(value = "keyword", defaultValue = "") String keyword) {
         System.out.println(String.format("searching keyword is: %s", keyword));
-        var foodlist = ReadCsv();
         var result = new ArrayList<FoodTruck>();
-        for(var item : foodlist){
+        for(var item : FoodTruckList){
             if(item.getFoodItems().toLowerCase().contains(keyword.toLowerCase())){
                 result.add(item);
             }
@@ -40,10 +44,14 @@ public class SearchController {
         return result;
     }
 
+    /**
+     * @Description method to read csv file to get full data of food truck info
+     * @return the food truck list from csv file
+     */
     private List<FoodTruck> ReadCsv() {
         List<List<String>> records = new ArrayList<List<String>>();
         List<FoodTruck> foodList = new ArrayList<FoodTruck>();
-        try (CSVReader reader = new CSVReader(new FileReader("d:\\Mobile_Food_Facility_Permit.csv"))) {
+        try (CSVReader reader = new CSVReader(new FileReader("/root/foodsearch/Mobile_Food_Facility_Permit.csv"))) {
             String[] nextLine;
             while ((nextLine = reader.readNext()) != null) {
                 FoodTruck food = new FoodTruck();
