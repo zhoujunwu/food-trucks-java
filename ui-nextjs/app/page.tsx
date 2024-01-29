@@ -66,9 +66,9 @@ export default function Home() {
                       <tbody>
                         {foodData.map((item, index) => (
                           <tr key={index} className="odd:bg-white even:bg-slate-50">
-                            <td className="px-6 py-4 whitespace-nowrap text font-medium text-slate-900 text-wrap">{item['location']}</td>
-                            <td className="px-6 py-4 whitespace-nowrap text font-medium text-slate-900 text-wrap">{item["address"]}</td>
-                            <td className="px-6 py-4 whitespace-nowrap text font-medium text-slate-900 text-wrap">{item["foodItems"]}</td>
+                            <td className="px-1 py-4 whitespace-nowrap text font-medium text-slate-900 text-balance break-all">{item['location']}</td>
+                            <td className="px-1 py-4 whitespace-nowrap text font-medium text-slate-900 text-balance break-all">{item["address"]}</td>
+                            <td className="px-1 py-4 whitespace-nowrap text font-medium text-slate-900 text-balance break-all">{item["foodItems"]}</td>
                           </tr>
                         ))}
                       </tbody>
