@@ -43,7 +43,7 @@ export default function Home() {
                 className="px-3 py-3 mt-1 text-lg block w-full border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring focus:ring-blue-300"
               />
               <button
-                className="flex items-center justify-center absolute right-2 top-2 h-10 border rounded-md w-20 bg-sky-500 hover:bg-sky-700 font-medium"
+                className="flex items-center justify-center absolute right-2 top-2 h-10 border rounded-md w-20 bg-sky-500 hover:bg-sky-700 font-medium text-white"
                 type="submit"
               >
                 Search
@@ -66,9 +66,9 @@ export default function Home() {
                       <tbody>
                         {foodData.map((item, index) => (
                           <tr key={index} className="odd:bg-white even:bg-slate-50">
-                            <td className="px-1 py-4 whitespace-nowrap text font-medium text-slate-900 text-balance break-all">{item['location']}</td>
-                            <td className="px-1 py-4 whitespace-nowrap text font-medium text-slate-900 text-balance break-all">{item["address"]}</td>
-                            <td className="px-1 py-4 whitespace-nowrap text font-medium text-slate-900 text-balance break-all">{item["foodItems"]}</td>
+                            <td className="px-1 py-4 font-medium text-slate-900 text-wrap break-words">{item['location']}</td>
+                            <td className="px-1 py-4 font-medium text-slate-900 text-wrap break-words">{item["address"]}</td>
+                            <td className="px-1 py-4 font-medium text-slate-900 text-wrap break-words">{item["foodItems"]}</td>
                           </tr>
                         ))}
                       </tbody>
