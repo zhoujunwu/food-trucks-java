@@ -58,7 +58,6 @@ export default function Home() {
                     <table className="w-full text-left table-fixed text-wrap">
                       <thead className="bg-slate-50 border-b border-slate-200">
                         <tr>
-                          <th className="py-3 text font-medium text-slate-900">No.</th>
                           <th className="px-6 py-3 text font-medium text-slate-900">Location </th>
                           <th className="px-6 py-3 text font-medium text-slate-900">Adress</th>
                           <th className="px-6 py-3 text font-medium text-slate-900">Food Items</th>
@@ -67,7 +66,6 @@ export default function Home() {
                       <tbody>
                         {foodData.map((item, index) => (
                           <tr key={index} className="odd:bg-white even:bg-slate-50">
-                            <td className="px-6 py-4 whitespace-nowrap text font-medium text-slate-900 text-wrap">{index}</td>
                             <td className="px-6 py-4 whitespace-nowrap text font-medium text-slate-900 text-wrap">{item['location']}</td>
                             <td className="px-6 py-4 whitespace-nowrap text font-medium text-slate-900 text-wrap">{item["address"]}</td>
                             <td className="px-6 py-4 whitespace-nowrap text font-medium text-slate-900 text-wrap">{item["foodItems"]}</td>
