@@ -29,14 +29,20 @@ default port is 8080 to listen request
 `host-addr/swagger-ui/index.html`  to do local debugging in swagger page
 
 
-## 2. the /ui folder to run a single page at browser, to call backend api to get search result of foods
-change the `API_URL` in index.html file according to backend api endpoint 
+## 2. the /ui-nextjs folder to run a single page at browser, to call backend api to get search result of foods
+change the `API_URL` in `app/page.tsx` file according to backend api endpoint 
+
+run `npm install` to install dependency
+
+run `npm run dev` to run ui local at listen to `3000` port by default
+
+run `npm run build` to generate build resource at `/out` folder
 
 
 ## 3. TODO
 - secuity check
 - search pattern
 - to show map of address
-- app log
+- logs
 - auto deploy
 - others
