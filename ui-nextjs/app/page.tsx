@@ -54,12 +54,12 @@ export default function Home() {
               {
                 foodData.length > 0 && (
                   <div>
-                    <div className="text-lg text-left text-slate-500">Total result: {foodData.length}</div>
-                    <table className="min-w-full max-w-full text-left table-fixed text-wrap">
+                    <div className="text-lg text-left text-slate-500">Total result: {foodData.length} <input name="fileterLoc" type="text" onChange={filterLocation} className="rounded border-2 border-black px-1" placeholder="do more location filter"></input></div>
+                    <table className="w-full text-left table-fixed text-wrap">
                       <thead className="bg-slate-50 border-b border-slate-200">
                         <tr>
-                          <th className="px-6 py-3 text font-medium text-slate-900">No.</th>
-                          <th className="px-6 py-3 text font-medium text-slate-900">Location <input name="fileterLoc" type="text" onChange={filterLocation} className="rounded border-2 border-black px-1" placeholder="do more location filter"></input></th>
+                          <th className="py-3 text font-medium text-slate-900">No.</th>
+                          <th className="px-6 py-3 text font-medium text-slate-900">Location </th>
                           <th className="px-6 py-3 text font-medium text-slate-900">Adress</th>
                           <th className="px-6 py-3 text font-medium text-slate-900">Food Items</th>
                         </tr>
