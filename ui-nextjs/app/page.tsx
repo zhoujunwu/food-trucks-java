@@ -3,13 +3,13 @@
 import React, { useState } from "react"
 
 export default function Home() {
-  // Change Backend URL accordingly
+  // change Backend URL accordingly
   const API_URL = `http://101.132.164.5:8080/search?keyword=`;
 
   const [foodData, setFoodData] = useState([]);
   const [query, setQuery] = useState('');
   const [firsttime, setFirsttime] = useState(true);
-  // used for filter
+  // used for filter data
   const [tempData, setTempData] = useState([]);
 
   async function handleClick() {
@@ -21,7 +21,7 @@ export default function Home() {
   }
 
   // filter location according to input words
-  function filterLocation(event: { target: { value: string; }; }){
+  function filterLocation(event: { target: { value: string; }; }) {
     setFoodData(tempData.filter(item => (item['location'] as String).toLowerCase().includes(event.target.value.toLowerCase())));
   }
 
@@ -55,7 +55,7 @@ export default function Home() {
                 foodData.length > 0 && (
                   <div>
                     <div className="text-lg text-left text-slate-500">Total result: {foodData.length}</div>
-                    <table className="min-w-full text-left table-fixed text-wrap">
+                    <table className="min-w-full max-w-full text-left table-fixed text-wrap">
                       <thead className="bg-slate-50 border-b border-slate-200">
                         <tr>
                           <th className="px-6 py-3 text font-medium text-slate-900">No.</th>
